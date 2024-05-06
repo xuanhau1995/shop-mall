@@ -5,6 +5,7 @@ import 'package:shopping_mall/util/theme/custom_themes/checkbox_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/chip_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/eleveted_button_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/outlined_button_theme.dart';
+import 'package:shopping_mall/util/theme/custom_themes/text_field_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/text_theme.dart';
 
 class TAppTheme {
@@ -14,29 +15,31 @@ class TAppTheme {
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.light,
-    primarySwatch: Colors.blue,
-    scaffoldBackgroundColor: Colors.white,
+    primaryColor: Colors.blue,
     textTheme: TTextTheme.lightTextTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
-    appBarTheme: IAppBarTheme.lightAppBarTheme,
-    bottomSheetTheme: IBottomSheetTheme.lightBottomSheetTheme,
-    checkboxTheme: ICheckBoxTheme.lightCheckBoxTheme,
     chipTheme: IChipTheme.lightChipTheme,
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: IAppBarTheme.lightAppBarTheme,
+    checkboxTheme: ICheckBoxTheme.lightCheckBoxTheme,
+    bottomSheetTheme: IBottomSheetTheme.lightBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: IOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFieldTheme.lightInputDecorationTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
     brightness: Brightness.dark,
-    primarySwatch: Colors.blue,
+    primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.black,
     textTheme: TTextTheme.darkTextTheme,
+    chipTheme: IChipTheme.darkChipTheme,
+    bottomSheetTheme: IBottomSheetTheme.darkBottomSheetTheme,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
     appBarTheme: IAppBarTheme.darkAppBarTheme,
-    bottomSheetTheme: IBottomSheetTheme.darkBottomSheetTheme,
     checkboxTheme: ICheckBoxTheme.darkCheckBoxTheme,
-    chipTheme: IChipTheme.darkChipTheme,
     outlinedButtonTheme: IOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: TTextFieldTheme.darkInputDecorationTheme,
   );
 }
