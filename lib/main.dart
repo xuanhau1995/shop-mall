@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shopping_mall/util/theme/theme.dart';
 
 void main() {
+  //
   runApp(const MainApp());
 }
 
