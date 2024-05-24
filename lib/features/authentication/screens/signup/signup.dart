@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:shopping_mall/features/authentication/screens/signup/widgets/signup-form.dart';
-import 'package:shopping_mall/util/constant/colors.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
-import 'package:shopping_mall/util/constant/text_strings.dart';
-import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

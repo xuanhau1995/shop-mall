@@ -5,6 +5,7 @@ import 'package:shopping_mall/util/theme/custom_themes/checkbox_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/chip_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/eleveted_button_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/outlined_button_theme.dart';
+import 'package:shopping_mall/util/theme/custom_themes/text_button_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/text_field_theme.dart';
 import 'package:shopping_mall/util/theme/custom_themes/text_theme.dart';
 
@@ -25,6 +26,7 @@ class TAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     outlinedButtonTheme: IOutlinedButtonTheme.lightOutlinedButtonTheme,
     inputDecorationTheme: TTextFieldTheme.lightInputDecorationTheme,
+    textButtonTheme: TTextButtonTheme.lightTextButtonTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -40,6 +42,7 @@ class TAppTheme {
     appBarTheme: IAppBarTheme.darkAppBarTheme,
     checkboxTheme: ICheckBoxTheme.darkCheckBoxTheme,
     outlinedButtonTheme: IOutlinedButtonTheme.darkOutlinedButtonTheme,
+    textButtonTheme: TTextButtonTheme.darkTextButtonTheme,
     inputDecorationTheme: TTextFieldTheme.darkInputDecorationTheme,
   );
 }
