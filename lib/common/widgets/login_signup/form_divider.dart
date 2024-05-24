@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shopping_mall/util/constant/colors.dart';
 import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
-class IFormDivider extends StatelessWidget {
-  const IFormDivider({super.key, required this.dividerText});
+class TFormDivider extends StatelessWidget {
+  const TFormDivider({super.key, required this.dividerText});
 
   final String dividerText;
 

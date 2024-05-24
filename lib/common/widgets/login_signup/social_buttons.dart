@@ -4,8 +4,8 @@ import 'package:shopping_mall/util/constant/image_strings.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
 import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
-class ISocialButtons extends StatelessWidget {
-  const ISocialButtons({super.key});
+class TSocialButtons extends StatelessWidget {
+  const TSocialButtons({super.key});
 
   @override
   Widget build(BuildContext context) {

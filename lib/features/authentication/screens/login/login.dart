@@ -27,13 +27,13 @@ class LoginScreen extends StatelessWidget {
                   const ILoginForm(),
 
                   /// *Divider
-                  IFormDivider(dividerText: 'Or Sign in With'),
+                  TFormDivider(dividerText: 'Or Sign in With'),
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
 
                   /// *Footer
-                  const ISocialButtons(),
+                  const TSocialButtons(),
                 ],
               )
             ],

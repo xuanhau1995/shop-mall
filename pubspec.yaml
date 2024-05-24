@@ -36,11 +36,12 @@ flutter:
 
   #---------------------------- LOCAL ASSETS --------------------------------#
   assets:
-    - assets/images/on_boarding_images/
     - assets/icons/
     - assets/fonts/
     - assets/videos/
     - assets/logo/
+    - assets/images/on_boarding_images/
+    - assets/images/verify_email/
 
 #---------------------------- LOCAL FONTS --------------------------------#
 fonts:

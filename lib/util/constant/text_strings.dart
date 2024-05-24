@@ -17,4 +17,9 @@ class ITexts {
   static const String loginTitle = "Welcome back";
   static const String loginSubTitle =
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.  the printing and typesetting industry. ";
+
+  /// Sign up
+  static const String isAgreeTo = "I agree to";
+  static const String termsAndCondition = "Terms & Condition";
+  static const String privacyPolicy = "Privacy Policy";
 }
