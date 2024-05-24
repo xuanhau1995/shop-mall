@@ -4,8 +4,8 @@ class IImages {
   static const String lightAppLogo = "assets/logo/logo.png";
 
   // -- Social Logos
-  static const String google = "/";
-  static const String facebook = "/";
+  static const String google = "assets/icons/google.png";
+  static const String facebook = "assets/icons/facebook.png";
 
 // -- OnBoarding Images
   static const String onBoardingImage1 =
@@ -14,4 +14,6 @@ class IImages {
       "assets/images/on_boarding_images/sammy-line-delivery.png";
   static const String onBoardingImage3 =
       "assets/images/on_boarding_images/sammy-line-delivery.png";
+
+  // Icons
 }

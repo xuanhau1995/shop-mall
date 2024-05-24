@@ -5,13 +5,8 @@ import 'package:shopping_mall/features/authentication/screens/onboarding/widgets
 import 'package:shopping_mall/features/authentication/screens/onboarding/widgets/onboardiing_circular_button.dart';
 import 'package:shopping_mall/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:shopping_mall/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:shopping_mall/util/constant/colors.dart';
 import 'package:shopping_mall/util/constant/image_strings.dart';
-import 'package:shopping_mall/util/constant/sizes.dart';
 import 'package:shopping_mall/util/constant/text_strings.dart';
-import 'package:shopping_mall/util/device/device_utility.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:iconsax/iconsax.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
