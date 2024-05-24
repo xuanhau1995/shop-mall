@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopping_mall/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:shopping_mall/features/authentication/screens/signup/signup.dart';
+import 'package:shopping_mall/navigation_menu.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
 
 class ILoginForm extends StatelessWidget {
@@ -14,7 +16,7 @@ class ILoginForm extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
       child: Column(
         children: [
-          /// Email
+          /// * Email
           TextFormField(
             decoration: const InputDecoration(
               prefixIcon: Icon(Iconsax.direct_right),
@@ -23,7 +25,7 @@ class ILoginForm extends StatelessWidget {
           ),
           SizedBox(height: TSizes.spaceBtwInputFields),
 
-          /// *Password
+          /// * Password
           TextFormField(
             decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
@@ -33,11 +35,11 @@ class ILoginForm extends StatelessWidget {
 
           SizedBox(height: TSizes.spaceBtwInputFields / 2),
 
-          /// *Remmember Me & Forget Passwords
+          /// * Remmember Me & Forget Passwords
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              /// Remmember Me
+              /// * Remmember Me
               Row(children: [
                 Checkbox(
                   value: true,
@@ -46,8 +48,10 @@ class ILoginForm extends StatelessWidget {
                 const Text('Remmember Me'),
               ]),
 
-              /// Forget Passwords
-              TextButton(onPressed: () {}, child: Text('Forget Passwords'))
+              /// * Forget Passwords
+              TextButton(
+                  onPressed: () => Get.to(() => const ForgetPasswordScreen()),
+                  child: Text('Forget Passwords?'))
             ],
           ),
 
@@ -55,10 +59,12 @@ class ILoginForm extends StatelessWidget {
             height: TSizes.spaceBtwSections,
           ),
 
-          /// *Sign in Button
+          /// * Sign in Button
           SizedBox(
             width: double.infinity,
-            child: ElevatedButton(onPressed: () {}, child: Text('Sign in')),
+            child: ElevatedButton(
+                onPressed: () => Get.to(() => const NavigationMenuScreen()),
+                child: Text('Sign in')),
           ),
 
           const SizedBox(

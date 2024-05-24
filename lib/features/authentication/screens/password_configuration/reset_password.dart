@@ -1,26 +1,28 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:shopping_mall/common/styles/spacing_styles.dart';
+import 'package:get/get.dart';
+import 'package:shopping_mall/features/authentication/screens/login/login.dart';
 import 'package:shopping_mall/util/constant/image_strings.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
 import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
-class SuccessScreen extends StatelessWidget {
-  const SuccessScreen(
-      {super.key,
-      required this.title,
-      required this.subtitle,
-      required this.image,
-      required this.onPressed});
-
-  final String title, subtitle, image;
-  final VoidCallback onPressed;
+class ResetPasswordScreen extends StatelessWidget {
+  const ResetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: TSpacingStyle.paddingWithAppBarHeight * 2,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            onPressed: () => Get.back(),
+            icon: const Icon(CupertinoIcons.clear),
+          )
+        ],
+      ),
+      body: Padding(
+          padding: EdgeInsets.all(TSizes.defaultSpacing),
           child: Column(
             children: [
               /// * Image
@@ -30,7 +32,7 @@ class SuccessScreen extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwSections),
 
               /// * Title  & Subtitle
-              Text(title,
+              Text('Password Reset Email Sent',
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center),
               const SizedBox(height: TSizes.spaceBtwItems),
@@ -45,14 +47,22 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: onPressed,
-                  child: Text('Continue'),
+                  onPressed: () => Get.offAll(() => LoginScreen()),
+                  child: Text('Done'),
+                ),
+              ),
+
+              const SizedBox(height: TSizes.spaceBtwItems),
+
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text('Resend email'),
                 ),
               ),
             ],
-          ),
-        ),
-      ),
+          )),
     );
   }
 }
