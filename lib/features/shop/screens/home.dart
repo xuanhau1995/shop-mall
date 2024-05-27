@@ -5,6 +5,7 @@ import 'package:shopping_mall/common/widgets/custom_shapes/circular_container.da
 import 'package:shopping_mall/common/widgets/custom_shapes/primary_header_container.dart';
 import 'package:shopping_mall/common/widgets/custom_shapes/search_container.dart';
 import 'package:shopping_mall/common/widgets/images/rounded_image.dart';
+import 'package:shopping_mall/common/widgets/layouts/grid_layout.dart';
 import 'package:shopping_mall/common/widgets/products/product_card_vertical.dart';
 import 'package:shopping_mall/common/widgets/texts/section_heading.dart';
 import 'package:shopping_mall/features/shop/screens/widgets/home_app_bar.dart';
@@ -13,12 +14,15 @@ import 'package:shopping_mall/features/shop/screens/widgets/home_promo_slider.da
 import 'package:shopping_mall/util/constant/colors.dart';
 import 'package:shopping_mall/util/constant/image_strings.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
+import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -70,7 +74,21 @@ class HomeScreen extends StatelessWidget {
                       IImages.banner3,
                     ],
                   ),
-                  TProductCardVertical()
+                  const SizedBox(height: TSizes.spaceBtwItems),
+
+                  /// * Heading
+                  TSectionHeading(
+                    title: 'Popular Products',
+                    textColor: dark ? IColors.white : IColors.dark,
+                    buttonTitle: 'View all',
+                  ),
+                  const SizedBox(height: TSizes.xs),
+
+                  /// * Product lists
+                  TGridLayout(
+                    itemBuilder: (_, index) => TProductCardVertical(),
+                    itemCount: 10,
+                  )
                 ],
               ),
             ),

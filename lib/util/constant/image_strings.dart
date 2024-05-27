@@ -25,4 +25,7 @@ class IImages {
   static const String banner1 = "assets/images/home_banner/banner1.webp";
   static const String banner2 = "assets/images/home_banner/banner2.webp";
   static const String banner3 = "assets/images/home_banner/banner3.webp";
+
+  /// * Product
+  static const String shose = "assets/images/shop/shose.png";
 }

@@ -78,5 +78,3 @@ class VerifyEmailScreen extends StatelessWidget {
     );
   }
 }
-
-class TColors {}

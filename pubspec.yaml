@@ -45,6 +45,7 @@ flutter:
     - assets/images/verify_email/
     - assets/images/cate/
     - assets/images/home_banner/
+    - assets/images/shop/
 
 #---------------------------- LOCAL FONTS --------------------------------#
 fonts:

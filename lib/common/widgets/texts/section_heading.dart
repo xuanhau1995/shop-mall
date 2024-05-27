@@ -19,11 +19,12 @@ class TSectionHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(title,
             style: Theme.of(context)
                 .textTheme
-                .headlineMedium!
+                .headlineSmall!
                 .apply(color: textColor),
             maxLines: 1,
             overflow: TextOverflow.ellipsis),
