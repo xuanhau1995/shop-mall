@@ -11,38 +11,42 @@ class TSearchContainer extends StatelessWidget {
     this.icon,
     this.showBackgroud = true,
     this.showBorder = true,
+    this.onTap,
   });
 
   final String text;
   final IconData? icon;
   final bool showBackgroud, showBorder;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpacing),
-      child: Container(
-        width: TDeviceUtils.getScreenWidth(),
-        padding: EdgeInsets.all(TSizes.md),
-        decoration: BoxDecoration(
-            color: showBackgroud
-                ? dark
-                    ? IColors.dark
-                    : IColors.light
-                : Colors.transparent,
-            borderRadius: BorderRadius.circular(TSizes.cardRadiusMd),
-            border: showBorder ? Border.all(color: IColors.grey) : null),
-        child: Row(
-          children: [
-            Icon(icon, color: IColors.black),
-            const SizedBox(width: TSizes.spaceBtwItems),
-            Text(
-              text,
-              style: Theme.of(context).textTheme.headlineSmall,
-            ),
-          ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpacing),
+        child: Container(
+          width: TDeviceUtils.getScreenWidth(),
+          padding: EdgeInsets.all(TSizes.md),
+          decoration: BoxDecoration(
+              color: showBackgroud
+                  ? dark
+                      ? IColors.dark
+                      : IColors.light
+                  : Colors.transparent,
+              borderRadius: BorderRadius.circular(TSizes.cardRadiusMd),
+              border: showBorder ? Border.all(color: IColors.grey) : null),
+          child: Row(
+            children: [
+              Icon(icon, color: dark ? IColors.white : IColors.black),
+              const SizedBox(width: TSizes.spaceBtwItems),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            ],
+          ),
         ),
       ),
     );
