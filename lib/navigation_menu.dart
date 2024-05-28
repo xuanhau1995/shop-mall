@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_mall/features/profile/screens/profile.dart';
-import 'package:shopping_mall/features/shop/screens/home.dart';
-import 'package:shopping_mall/features/store/screens/store.dart';
-import 'package:shopping_mall/features/wishlist/screens/wishlist.dart';
+import 'package:shopping_mall/features/shop/screens/home/home.dart';
+import 'package:shopping_mall/features/shop/screens/store/store.dart';
+import 'package:shopping_mall/features/shop/screens/wishlist/wishlist.dart';
 import 'package:shopping_mall/util/constant/colors.dart';
 import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
