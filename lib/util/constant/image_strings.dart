@@ -28,4 +28,5 @@ class IImages {
 
   /// * Product
   static const String shose = "assets/images/shop/shose.png";
+  static const String clother = "assets/images/shop/clother.webp";
 }

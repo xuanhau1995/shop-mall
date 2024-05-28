@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:shopping_mall/common/widgets/custom_shapes/primary_header_container.dart';
 import 'package:shopping_mall/common/widgets/custom_shapes/search_container.dart';
 import 'package:shopping_mall/common/widgets/layouts/grid_layout.dart';

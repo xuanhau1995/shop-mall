@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_mall/common/widgets/appbar/appbar.dart';
+import 'package:shopping_mall/common/widgets/container/rounded_container.dart';
 import 'package:shopping_mall/common/widgets/custom_shapes/search_container.dart';
+import 'package:shopping_mall/common/widgets/images/circular_icon_image.dart';
 import 'package:shopping_mall/common/widgets/products/cart_counter_icon.dart';
 import 'package:shopping_mall/common/widgets/texts/section_heading.dart';
 import 'package:shopping_mall/util/constant/colors.dart';
+import 'package:shopping_mall/util/constant/image_strings.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
 import 'package:shopping_mall/util/helpers/helper_functions.dart';
 
@@ -61,6 +64,21 @@ class StoreScreen extends StatelessWidget {
                       textColor: dark ? IColors.white : IColors.dark,
                       onPressed: () {},
                     ),
+                    const SizedBox(height: TSizes.defaultSpacing / 2),
+
+                    TRoundedContainer(
+                      padding: EdgeInsets.all(TSizes.sm),
+                      showBorder: true,
+                      backgroundColor: Colors.transparent,
+                      child: Row(
+                        children: [
+                          /// * Icon
+                          const TCircularIconImage(
+                            imageURL: IImages.clother,
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
