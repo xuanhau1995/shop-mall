@@ -55,9 +55,9 @@ class StoreScreen extends StatelessWidget {
                       height: TSizes.spaceBtwItems,
                     ),
 
-                    /// * Feature Brand
+                    /// * Features Brand
                     TSectionHeading(
-                      title: 'Feature Brand',
+                      title: 'Features Brand',
                       textColor: dark ? IColors.white : IColors.dark,
                       onPressed: () {},
                     ),
