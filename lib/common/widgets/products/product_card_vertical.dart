@@ -6,7 +6,7 @@ import 'package:shopping_mall/common/widgets/icons/t_circular_icon.dart';
 import 'package:shopping_mall/common/widgets/images/rounded_image.dart';
 import 'package:shopping_mall/common/widgets/products/product_price.dart';
 import 'package:shopping_mall/common/widgets/products/product_title_text.dart';
-import 'package:shopping_mall/common/widgets/products/product_verify_label.dart';
+import 'package:shopping_mall/common/widgets/products/brand_title_text.dart';
 import 'package:shopping_mall/util/constant/colors.dart';
 import 'package:shopping_mall/util/constant/image_strings.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
@@ -89,7 +89,9 @@ class TProductCardVertical extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
 
                   /// * Label
-                  TProductVerifyLabel(),
+                  TBrandTitleText(
+                    brandTitle: 'Nike',
+                  ),
                 ],
               ),
             ),

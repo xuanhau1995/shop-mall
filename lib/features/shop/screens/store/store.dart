@@ -3,9 +3,12 @@ import 'package:shopping_mall/common/widgets/appbar/appbar.dart';
 import 'package:shopping_mall/common/widgets/container/rounded_container.dart';
 import 'package:shopping_mall/common/widgets/custom_shapes/search_container.dart';
 import 'package:shopping_mall/common/widgets/images/circular_icon_image.dart';
+import 'package:shopping_mall/common/widgets/layouts/grid_layout.dart';
+import 'package:shopping_mall/common/widgets/products/brand_title_text.dart';
 import 'package:shopping_mall/common/widgets/products/cart_counter_icon.dart';
 import 'package:shopping_mall/common/widgets/texts/section_heading.dart';
 import 'package:shopping_mall/util/constant/colors.dart';
+import 'package:shopping_mall/util/constant/enums.dart';
 import 'package:shopping_mall/util/constant/image_strings.dart';
 import 'package:shopping_mall/util/constant/sizes.dart';
 import 'package:shopping_mall/util/helpers/helper_functions.dart';
@@ -21,6 +24,7 @@ class StoreScreen extends StatelessWidget {
       appBar: TAppBar(
         title: Text('Store', style: Theme.of(context).textTheme.headlineMedium),
         showBackArrow: false,
+        backgroundColor: dark ? IColors.dark : IColors.white,
         actions: [TCartCounterIcon()],
       ),
 
@@ -66,19 +70,55 @@ class StoreScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: TSizes.defaultSpacing / 2),
 
-                    TRoundedContainer(
-                      padding: EdgeInsets.all(TSizes.sm),
-                      showBorder: true,
-                      backgroundColor: Colors.transparent,
-                      child: Row(
-                        children: [
-                          /// * Icon
-                          const TCircularIconImage(
-                            imageURL: IImages.clother,
-                          ),
-                        ],
-                      ),
-                    )
+                    TGridLayout(
+                        itemCount: 4,
+                        mainAxisExtent: 80,
+                        itemBuilder: (_, index) {
+                          return GestureDetector(
+                            onTap: () {},
+                            child: TRoundedContainer(
+                              padding: EdgeInsets.all(TSizes.sm),
+                              showBorder: true,
+                              backgroundColor: Colors.transparent,
+                              child: Row(
+                                children: [
+                                  /// * Icon
+                                  Flexible(
+                                    child: const TCircularIconImage(
+                                      imageURL: IImages.clother,
+                                      backgroudColor: Colors.transparent,
+                                    ),
+                                  ),
+
+                                  /// * Text
+                                  Expanded(
+                                    child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          TBrandTitleText(
+                                            brandTitle: 'Nike',
+                                            brandTextSize: TextSizes.large,
+                                            textColor: dark
+                                                ? IColors.white
+                                                : IColors.dark,
+                                          ),
+                                          Text(
+                                            '250 Products adgjhgsdjh',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: Theme.of(context)
+                                                .textTheme
+                                                .labelLarge!
+                                                .apply(color: IColors.darkGrey),
+                                          )
+                                        ]),
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
+                        })
                   ],
                 ),
               ),
